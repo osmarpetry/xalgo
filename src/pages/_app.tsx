@@ -3,6 +3,8 @@ import Head from 'next/head'
 
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
+import AppBar from 'components/Appbar'
+import { Container } from '@mui/material'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -18,7 +20,10 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <AppBar />
+      <Container maxWidth="sm" sx={{marginTop: '5rem'}}>
+        <Component {...pageProps} />
+      </Container>
     </ThemeProvider>
   )
 }

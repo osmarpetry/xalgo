@@ -1,18 +1,8 @@
-import Button from 'components/Button'
+import Table, { RowData } from 'components/Table'
 
 export default function Home() {
+
   return (
-    <main
-      style={{
-        alignItems: 'center',
-        display: 'flex',
-        height: '100vh',
-        justifyContent: 'center'
-      }}
-    >
-      <Button size="large" onClick={() => alert('Thanks bro!')}>
-        Alert me!
-      </Button>
-    </main>
+      <div>Home</div>
   )
 }
