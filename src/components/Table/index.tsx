@@ -1,25 +1,22 @@
-import React from 'react';
-import { makeStyles } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import React from 'react'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TableRow from '@mui/material/TableRow'
+import Paper from '@mui/material/Paper'
 
 export interface RowData {
-  [key: string]: string | number;
+  [key: string]: string | number
 }
 
 interface ReusableTableProps {
-  columns: string[];
-  data: RowData[];
+  columns: string[]
+  data: RowData[]
 }
 
-
 const ReusableTable: React.FC<ReusableTableProps> = ({ columns, data }) => {
-
   return (
     <TableContainer component={Paper}>
       <Table aria-label="Reusable Table">
@@ -41,7 +38,7 @@ const ReusableTable: React.FC<ReusableTableProps> = ({ columns, data }) => {
         </TableBody>
       </Table>
     </TableContainer>
-  );
-};
+  )
+}
 
-export default ReusableTable;
+export default ReusableTable

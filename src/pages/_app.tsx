@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyles />
       <AppBar />
-      <Container maxWidth="sm" sx={{marginTop: '5rem'}}>
+      <Container maxWidth="sm" sx={{ marginTop: '5rem' }}>
         <Component {...pageProps} />
       </Container>
     </ThemeProvider>
