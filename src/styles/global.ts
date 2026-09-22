@@ -1,26 +1,21 @@
 import {
   createGlobalStyle,
   css,
-  DefaultTheme,
-  GlobalStyleComponent
+  type DefaultTheme
 } from 'styled-components'
 
 type GlobalStylesProps = {
-  theme: DefaultTheme
-  removeBg?: boolean
+  $removeBg?: boolean
 }
 
-const GlobalStyles: GlobalStyleComponent<
-  GlobalStylesProps,
-  DefaultTheme
-> = createGlobalStyle`
+const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
     src: local('Poppins Light'), local('Poppins-Light'),
-        url('/fonts/poppins-v12-latin-300.woff2') format('woff2');
+      url('/fonts/poppins-v12-latin-300.woff2') format('woff2');
   }
 
   @font-face {
@@ -29,7 +24,7 @@ const GlobalStyles: GlobalStyleComponent<
     font-weight: 400;
     font-display: swap;
     src: local('Poppins Regular'), local('Poppins-Regular'),
-        url('/fonts/poppins-v12-latin-regular.woff2') format('woff2');
+      url('/fonts/poppins-v12-latin-regular.woff2') format('woff2');
   }
 
   @font-face {
@@ -38,7 +33,7 @@ const GlobalStyles: GlobalStyleComponent<
     font-weight: 600;
     font-display: swap;
     src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
-        url('/fonts/poppins-v12-latin-600.woff2') format('woff2');
+      url('/fonts/poppins-v12-latin-600.woff2') format('woff2');
   }
 
   * {
@@ -54,7 +49,7 @@ const GlobalStyles: GlobalStyleComponent<
     }
   }
 
-  ${({ theme, removeBg }) => css`
+  ${({ theme, $removeBg }) => css`
     html {
       font-size: 62.5%;
     }
@@ -63,13 +58,12 @@ const GlobalStyles: GlobalStyleComponent<
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
 
-      ${!removeBg &&
+      ${!$removeBg &&
       css`
         background-color: ${theme.colors.mainBg};
       `}
     }
   `}
-
 `
 
 export default GlobalStyles
