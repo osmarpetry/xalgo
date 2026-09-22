@@ -44,7 +44,7 @@
     "@storybook/addon-docs": "^10.6.0",
     "@storybook/addon-links": "10.6.0",
     "@storybook/nextjs-vite": "10.6.0",
-    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "15.0.7",
     "@types/jest": "30.0.0",
     "@types/node": "26.6.1",
