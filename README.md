@@ -10,7 +10,6 @@ This project uses lot of stuff as:
 - [Storybook](https://storybook.js.org/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
-- [Husky](https://github.com/typicode/husky)
 
 ## Getting Started
 
